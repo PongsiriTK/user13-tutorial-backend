@@ -8,11 +8,12 @@ on:
 
 jobs:
   unitest:
-  name: UnitTest (XUnit)
-  runs-on: ubuntu-latest
-  environment:
-    name: dev
-      steps:
+    name: UnitTest (XUnit)
+    runs-on: ubuntu-latest
+    environment:
+      name: dev
+    
+    steps:
     - name: Checkout code
       uses: actions/checkout@v2
 
@@ -35,5 +36,3 @@ jobs:
       with:
         name: Unit Test Results
         path: '${{ github.workspace }}/coveragereport/*'
-
-
